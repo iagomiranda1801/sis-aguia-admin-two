@@ -1,0 +1,200 @@
+:root {
+    --bg-colorSister: radial-gradient(#fd8000, #ff9007, #ff7707);
+    /* radial-gradient(#00b5eb,#35b5db,#3db1bf); Azul*/
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blinking {
+    animation: blinker 2s linear infinite;
+}
+
+/* Estilos para telas menores (como celulares) */
+/* @media (max-width: 768px) {
+    .imageStyle {
+      clip-path: none;
+      height: auto;
+    }
+    .formStyle {
+      position: relative;
+      margin-right: 0px !important;
+    }
+  } */
+
+.formStyle {
+    background-color: #565656;
+}
+
+/* CARD LOGIN */
+#container-login {
+    height: 80%;
+}
+
+#card-login {
+    border: 0px solid #5a61694a !important;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 2px 0 #5a61691c,
+        0 4px 8px #5a61691f,
+        0 10px 10px #5a61690f,
+        0 7px 70px #5a61691a !important;
+}
+
+/* FORM, FORM'S INPUT */
+.form-login {
+    width: 80%;
+    margin: 25% auto;
+}
+
+.inputLogin {
+    width: 85%;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #c3c3c3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-bottom: 0px !important;
+}
+
+.inputLogin:focus {
+    outline: none;
+    box-shadow: none !important;
+    border-bottom-color: #ff9007;
+    transition-duration: 500ms;
+}
+
+.inputLogin~.form-label {
+    transform: translateY(27%);
+    padding-bottom: 0;
+    padding-left: 5px;
+    color: #565656;
+    font-weight: bold;
+}
+
+.feedback-form-login {
+    display: block;
+    color: #f93e3e;
+    margin: 5px;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+/* BUTTON LOGIN */
+.btn-form-login,
+.btn-form-login:disabled {
+    width: 45%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: #ed940f !important;
+    border-color: #deb863 !important;
+}
+
+.btn-form-login:hover {
+    color: #261401;
+    background-color: #e37a0e !important;
+    border-color: #deb863 !important;
+}
+
+/* IMAGE COLUMN */
+.img-login {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: var(--bg-colorSister);
+    color: #fff;
+}
+
+/* LOGO SISTER */
+.logo-sister {
+    height: 20%;
+    width: fit-content;
+    margin-top: 27%;
+}
+
+.logo-text {
+    font-size: xxx-large;
+    font-weight: 900;
+}
+
+.logo-text~p {
+    width: 80%;
+    margin: 10px auto;
+    font-weight: 600;
+}
+
+/* TABLET LANDSCAPE VIEW */
+@media (max-height: 550px) {
+    .form-login {
+        margin: 5% auto;
+    }
+
+    h1 {
+        font-size: large;
+    }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 767px) {
+
+    /* CARD LOGIN */
+    #container-login {
+        height: 90%;
+    }
+
+    #card-login {
+        border-radius: 15px;
+        background: var(--bg-colorSister);
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    /* FORM COLUMN */
+    .form-login {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        z-index: 2;
+        padding: 7% 4%;
+        border-radius: 5px;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    .inputLogin {
+        width: 100%;
+    }
+
+    .btn-form-login,
+    .btn-form-login:disabled {
+        height: 40px;
+        width: 100%;
+    }
+
+    /* IMAGE COLUMN */
+    #col-img-login {
+        height: 50% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-bottom: 5px;
+    }
+
+    .img-login {
+        background: none;
+    }
+
+    .logo-text~p {
+        display: none;
+    }
+
+
+}
